@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Live View{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Live Camera Feed</h2>
+<h3>Current Cars Inside: <span id="carCount">Loading...</span></h3>
+<div class="container mt-4">
+
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h4>IN Camera</h4>
+      <img src="{{ url_for('video_feed_in') }}" width="100%" class="img-fluid border border-secondary rounded">
+    </div>
+    <div class="col-md-6 text-center">
+      <h4>OUT Camera</h4>
+      <img src="{{ url_for('video_feed_out') }}" width="100%" class="img-fluid border border-secondary rounded">
+    </div>
+  </div>
+</div>
+{% endblock %}
